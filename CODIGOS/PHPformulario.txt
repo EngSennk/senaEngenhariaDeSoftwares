@@ -13,10 +13,10 @@ if ($conn->connect_error) {
 }
 
 // Recebe os dados do formulário
-$nome = $_GET['nome'];
-$email = $_GET['email'];
-$assunto = $_GET['assunto'];
-$mensagem = $_GET['mensagem'];
+$nome = $_REQUEST['nome'];
+$email = $_REQUEST['email'];
+$assunto = $_REQUEST['assunto'];
+$mensagem = $_REQUEST['mensagem'];
 
 // Insere os dados na tabela
 $sql = "INSERT INTO contatos (nome, email, assunto, mensagem) VALUES ('$nome', '$email', '$assunto', '$mensagem')";
