@@ -444,41 +444,43 @@
    <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
    <h4 class="contact-sub-title padd-15">I'M VERY RESPOSIVE TO MESSAGES</h4>
 <!-- ===== Contact Form Start ===== -->
- <div class="row">
-  <div class="contact-form padd-15">
-    <div class="row">
-      <div class="form-item col-6 padd-15">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Name">
+ <section>
+<form action="processar_formulario.php" method="post"> 
+  <div class="row">
+    <div class="contact-form padd-15">
+      <div class="row">
+        <div class="form-item col-6 padd-15">
+          <div class="form-group">
+            <input type="text" class="form-control" name="nome" placeholder="Nome">
+          </div>
+        </div>
+        <div class="form-item col-6 padd-15">
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" placeholder="Email"> 
+          </div>
         </div>
       </div>
-      <div class="form-item col-6 padd-15">
-        <div class="form-group">
-          <input type="Email" class="form-control" placeholder="Email">
+      <div class="row">
+        <div class="form-item col-12 padd-15">
+          <div class="form-group">
+            <textarea name="assunto" class="form-control" id="" placeholder="Assunto"></textarea>
+          </div>
+        </div>
+        <div class="form-item col-12 padd-15">
+          <div class="form-group">
+            <textarea name="mensagem" class="form-control" id="" placeholder="Mensagem"></textarea>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="form-item col-12 padd-15">
-        <div class="form-group">
-          <textarea name="Text" class="form-control" id="" placeholder="Subject"></textarea>
+      <div class="row">
+        <div class="form-item col-12 padd-15">
+          <button type="submit" class="btn">Enviar Mensagem</button>
         </div>
-      </div>
-
-      <div class="form-item col-12 padd-15">
-        <div class="form-group">
-          <textarea name="" class="form-control" id="" placeholder="Message"></textarea>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="form-item col-12 padd-15">
-        <button type="submit" class="btn">Send Message</button>
-        
       </div>
     </div>
   </div>
- </div>
+</form>
+</section>
 <!-- ===== Contact Form End===== -->
    </div>
   </section>
