@@ -5,7 +5,15 @@ var typed = new Typed(".typing",
     backSpeed: 30,
     loop: true
 });
-/* ================================== Aside =========================== */ 
+=
+// ============================= Menu hamburguer ==========================
+
+const aside = document.getElementById('aside');
+const menuToggle = document.querySelector('.menu-toggle');
+
+menuToggle.addEventListener('click', () => {
+  aside.classList.toggle('open');
+});
 /* ================================== Aside =========================== */ 
 const nav = document.querySelector(".nav"),
     navList = nav.querySelectorAll("li"),

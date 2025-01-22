@@ -28,6 +28,8 @@ body.dark
   }
 body
 {   
+    margin: 0;
+    padding: 0;
     background-color: #fff;
     color: #333;
     line-height: 1.5;
@@ -59,10 +61,7 @@ ul
     padding: 0 30px;
     opacity: 1;
 }
-.main-content
-{
-    padding-left: 270px;
-}
+
 .hidden
 {
     display: none !important;
@@ -74,8 +73,8 @@ ul
 }
 .container
 {
-    max-width: 1100px;
-    width: 100%;
+    max-width: 1200px;
+    width: 90%;
     margin: auto;
 }
 .section .container
@@ -146,13 +145,36 @@ ul
 {
     box-shadow: 0 0 20px rgba(48,46,77,0.15);
 }
-/* aside */ 
+.menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px; /* Adjust top position as needed */
+    right: 20px; /* Adjust right position as needed */
+    width: 30px;
+    height: 20px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #ff0000;
+    margin-bottom: 5px;
+}
+/* aside */
+.menu-toggle 
+{
+    
+
+}
+
 .aside
 {
-    width: 270px;
+
+    width: 250px;
     background: var(--bg-black-100);
     position: fixed;
-    left: 0;
+    left: 200px;
     top: 0;
     padding: 30px;
     height: 100%;
@@ -161,6 +183,10 @@ ul
     justify-content: center;
     align-items: center;
     z-index: 10;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    
+    
 }
 .aside .logo
 {
@@ -296,7 +322,7 @@ ul
 .home .home-info
 {
     flex: 0 0 60%;
-    max-width: 60%;
+    max-width: 100%;
 }
 h3.hello
 {
@@ -412,6 +438,7 @@ h3.my-specification
 }
 .about .about-content .personal-info .info-item p
 {
+   
     font-weight: 600;
     padding: 10px 0;
     font-size: 20px;
@@ -419,6 +446,20 @@ h3.my-specification
     border-bottom: 1px solid var(--text-black-50); /*TEST*/
     
 }
+.info-item {
+    display: flex;
+    flex-wrap: wrap; 
+  }
+  
+  .info-item p {
+    flex: 1; 
+  }
+  .info-item p span {
+    font-size: 1em;
+    max-width: 100%; 
+    word-break: break-word;
+    text-align: left;
+  }
 .about .about-content .personal-info .info-item p span
 {
     font-weight: 400;
@@ -807,12 +848,29 @@ h3.my-specification
   .bx {
     font-size: 24px; 
   }
+
+ @media (max-width: 1610px) 
+ {
+        .aside {
+          display: none; 
+         
+          visibility: hidden; 
+          
+          left: -300px; 
+        }
+      }
+
 @media (max-width:1199px)
 {
     .aside
     {
         left: -270px;
     }
+    .main-content
+    {
+        padding-left: -270px;
+    }
+  
 }
      .main-content
     {
@@ -840,7 +898,8 @@ h3.my-specification
     } 
     .home .home-img
     {
-        display: none;
+        
+        display: flex;
     }
 
 }
@@ -855,7 +914,26 @@ h3.my-specification
     .about .about-content .experience,
     .about .about-content .education, 
     .about .about-content .skill,
-    .about .about-content .personal-info
+    .about .about-content .personal-info,
+    .home .home-img
+
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+} 
+@media (max-width:100px)
+{
+
+    .contact .contact-form .col-6,
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item,
+    .about .about-content .experience,
+    .about .about-content .education, 
+    .about .about-content .skill,
+    .about .about-content .personal-info,
+    .home .home-img
 
     {
         flex: 0 0 100%;
