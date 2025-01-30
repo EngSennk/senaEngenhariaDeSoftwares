@@ -8,11 +8,12 @@ var typed = new Typed(".typing",
 =
 // ============================= Menu hamburguer ==========================
 
-const aside = document.getElementById('aside');
-const menuToggle = document.querySelector('.menu-toggle');
+const menuToggle = document.getElementById('menu-toggle');
+const navList = document.getElementById('nav-list');
 
 menuToggle.addEventListener('click', () => {
-  aside.classList.toggle('open');
+    navList.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', navList.classList.contains('open'));
 });
 /* ================================== Aside =========================== */ 
 const nav = document.querySelector(".nav"),
