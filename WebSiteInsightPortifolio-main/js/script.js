@@ -102,3 +102,16 @@ function showSection(element)
                 }
             }
       
+// ==================== formulario de email ==============================//
+<script>
+const form = document.getElementById('meuFormulario');
+const mensagemSucesso = document.getElementById('mensagemSucesso');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    setTimeout(() => {
+      mensagemSucesso.style.display = 'block';
+      form.style.display = 'none'; 
+    }, 1000); 
+  });
+</script>
