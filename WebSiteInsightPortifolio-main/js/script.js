@@ -1,7 +1,7 @@
 /* =============================== typing animation ==================== */
 window.addEventListener('load', function() {
     const typed = new Typed('.typing', {
-        strings: ['Web Developer', 'Full Stack Developer', 'Enginner of Software','Web Developer'], 
+        strings: ['Web Developer', 'Full Stack Developer', 'Engi nner of Software','Web Developer'], 
         typeSpeed: 100,
         backSpeed: 10,
         backDelay: 1000,
